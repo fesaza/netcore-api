@@ -2,7 +2,7 @@
 
 net core api requests demo
 
-It's a `.net core` project (2.1.300)
+This is a `.net core` project (2.1.300)
 
 ## run project
 
