@@ -27,6 +27,10 @@ namespace codenullConfigApi
         {
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.Configure<MvcOptions>(options =>
+            {
+                options.Filters.Add(new BasicAuthorizeFilter());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,7 +48,7 @@ namespace codenullConfigApi
             app.UseCors(builder =>
                 builder.WithOrigins("*"));
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseMvc();
         }
     }

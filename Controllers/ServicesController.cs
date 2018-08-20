@@ -10,6 +10,7 @@ namespace codenullConfigApi.Controllers
     [Route("api/[controller]")]
     [Produces("application/json")]
     [ApiController]
+    [BasicAuthorize("https://localhost:5001")]
     public class ServicesController : ControllerBase
     {
         persistence _persistence;
@@ -57,9 +58,7 @@ namespace codenullConfigApi.Controllers
             return applyResponse(articles);
         }
 
-    
-
-    private articlesResponse applyResponse(List<article> articles){
+        private articlesResponse applyResponse(List<article> articles){
             return new articlesResponse{
                 success = true,
                 total_elements = articles.Count,
