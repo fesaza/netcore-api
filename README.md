@@ -18,7 +18,7 @@ Build and run
 
 ## test
 
-test the following urls, the browser will display a login window. user: `my_user` password: ``my_password`
+test the following urls, the browser will display a login window. user: `my_user` password: `my_password`
 
 Get articles list
 
